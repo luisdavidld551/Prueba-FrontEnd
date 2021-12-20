@@ -1,0 +1,26 @@
+<div>
+    <br><br>
+    <div class="auth-wrapper container" id="inicioDeSesion">
+        <form class="form-signin" [formGroup]="loginFormulario" (ngSubmit)="iniciarSesion()">
+            <div class="imgCirculo container"><img src="../assets/logo-x.png"  width="59.911px" height="59.911px" alt=""> </div>
+            <h1 class="h3 mb-3 font-weight-normal text-center">Ingresa a tu tienda</h1>
+
+            <div class="form-group">
+                <input type="email" class="form-control" placeholder="Correo electrónico" formControlName="email" email="true" >
+                <i class="material-icons">mail_outline</i>
+                <div *ngIf="errors!=''" class="alert alert-danger mt-3">
+                    {{ errors }}
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="password" placeholder="Contraseña" class="form-control" formControlName="password">
+                <i class="material-icons">vpn_key</i>
+                <div *ngIf="errors?.error" class="alert alert-danger mt-3">
+                    {{ errors?.error }}
+                </div>
+            </div>
+            
+            <button type="submit" class="btn btn-block btn-primary">Ingresar</button>
+        </form>
+    </div>
+</div>
