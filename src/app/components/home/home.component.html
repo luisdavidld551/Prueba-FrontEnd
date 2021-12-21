@@ -1,0 +1,52 @@
+<br><br><br>
+<div class="container">
+    <div class="pocision">
+        <div>
+            <p>Categoria</p>
+        </div>
+        <div>
+            <i class="left fas fa-arrow-left" (click)="currentPage != 1 && changePage(-1)"
+                [ngClass]="{'disabled':currentPage === 1}"></i>
+            <i class="right fas fa-arrow-right" (click)="currentPage != totalPages && changePage(+1)"
+                [ngClass]="{'disabled':currentPage === totalPages}"></i>
+        </div>
+    </div>
+    <div>
+        <div class="container2" #container>
+            <div class="cards card2" [ngClass]="{'w-100': totalPages === 1}">
+                <div class="overflow" [ngStyle]="{'width': overflowWidth, 'left': pagePosition}">
+                    <div class="card" *ngFor="let i of categoria; let index = index" [ngStyle]="{'width': cardWidth}">
+                        <img class="card-img-top" src="{{i.picture}}" alt="Card image cap">
+                        <div class="card-body">
+                            <p class="card-text">{{i.name}}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div><i class="fa fa-shopping-cart"> Tiendas</i></div>
+        <div>
+            <div class="card mb-3" style="width: 520px; height: 120px; text-align: left;" *ngFor="let i of store;">
+                <div class="row g-0">
+                    <div class="col-md-3">
+                        <img class="img" src="{{i.picture}}" width="110" height="90" alt="Card image cap">
+                    </div>
+                    <div class="col-md-9">
+                        <div>
+                            <h5 class="card-title">{{i.name}}</h5>
+                            <p class="card-text"> <i class="fas fa-map-marker-alt " > {{i.location}} </i>  <i class="far fa-star"> {{i.rating}}</i></p>
+                            
+                            <p class="card-text"><small class="text-muted">{{i.labels}}</small></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</div>

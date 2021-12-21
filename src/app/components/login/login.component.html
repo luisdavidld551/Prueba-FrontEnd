@@ -1,9 +1,9 @@
 <div>
-    <br><br>
+    <br><br><br><br>
     <div class="auth-wrapper container" id="inicioDeSesion">
         <form class="form-signin" [formGroup]="loginFormulario" (ngSubmit)="iniciarSesion()">
             <div class="imgCirculo container"><img src="../assets/logo-x.png"  width="59.911px" height="59.911px" alt=""> </div>
-            <h1 class="h3 mb-3 font-weight-normal text-center">Ingresa a tu tienda</h1>
+            <h1 class="text-center">Ingresa a tu tienda</h1>
 
             <div class="form-group">
                 <input type="email" class="form-control" placeholder="Correo electrónico" formControlName="email" email="true" >
@@ -20,7 +20,7 @@
                 </div>
             </div>
             
-            <button type="submit" class="btn btn-block btn-primary">Ingresar</button>
+            <button type="submit" class="btn btn-block" style=" background: #00d0eb; color: #fff;">Ingresar</button>
         </form>
     </div>
 </div>

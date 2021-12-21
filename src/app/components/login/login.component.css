@@ -1,12 +1,12 @@
 form {
     display:inline-block;
-    font-family: Airbnb Cereal App,Georgia,Cambria,Times New Roman,Times,serif;
 }
 form>div {
     position:relative;
     margin-top:5px;
 }
 form>div>input {   
+    color: #9db5c2;
     box-sizing: border-box;
     padding:10px 30px 10px 10px;
     width:100%;
@@ -14,15 +14,18 @@ form>div>input {
     box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;
 }
 form>div>i {
+    color: #9db5c2;
     position:absolute;
     right:10px;
     top:7px;
 }
 form>h1{
+    color: #2d4e60;
+    font-family: revert;
     font-weight: 900!important;
-    font-size: 1.875rem!important;
 }
 .imgCirculo{
+    bottom: 15px;
     padding:40px;
     height: 144px;
     width: 144px;

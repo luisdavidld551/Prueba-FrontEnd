@@ -2,20 +2,20 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment.prod';
 import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
-import { Users } from '../models/users';
+import { Categorias } from '../models/categorias';
 import { catchError } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
-export class UsersService {
+export class CategoriasService {
 
-  private base = environment.base + 'user';
+  private base = environment.base + 'categories';
 
   constructor(private http:HttpClient) { }
  
-  getUser(): Observable<Users[]> {
-    return this.http.get<Users[]>(this.base).pipe(catchError(this.errorHandler))
+  getCategorias(): Observable<Categorias[]> {
+    return this.http.get<Categorias[]>(this.base).pipe(catchError(this.errorHandler))
   }
 
   errorHandler(error: { error: { message: string; }; status: any; message: any; }) {
@@ -27,5 +27,4 @@ export class UsersService {
     }
     return throwError(errorMessage);
   }
-  
 }
