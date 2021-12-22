@@ -10,12 +10,69 @@ body{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    margin: 0; 
-    font-family: Roboto, "Helvetica Neue", sans-serif;
+    margin: 0;
 }
-html, body { height: 100%; }
-
+.w-100 {
+    width: 100%!important;
+  }
 .container{
     margin: 0 auto;
     text-align: center;
+}
+.container2 {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    background-color: white;
+    padding: 15px;
+}
+.pocision{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.card {
+    height: 190px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-right: 10px;
+    position: relative;
+    border: 0px;
+  }
+  .overflow {
+    position: relative;
+    transition: left 0.5s ease-in-out;
+  }
+  .cards {
+    width: calc(100% - 80px);
+    overflow: hidden;
+  }
+  .no-right-margin {
+    margin-right: 0px;
+  }
+
+  .left,
+  .right {
+    height: 30px;
+    width: 30px;
+    color: #0072bc;
+  }
+  
+  .left.disabled, .right.disabled {
+    color:#CCC;
+  }
+  
+  .left {
+    left: 0;
+  }
+  
+  .right {
+    right: 0;
+  }
+
+  @media screen and (max-width: 480px){
+    .card{
+        width: 480px;
+    }
+    
 }

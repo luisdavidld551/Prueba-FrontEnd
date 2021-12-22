@@ -1,8 +1,8 @@
-export interface Stores {
+export interface Promos {
   id: number;
   name: string;
-  location: string;
+  store: string;
   rating: number;
   picture: string;
-  labels: any[];
+  price: number;
 }

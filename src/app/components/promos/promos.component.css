@@ -1,0 +1,18 @@
+.precioPromo{
+    top: 10px;
+    position: absolute;
+    right: 10%;
+    background-color: #ce5a5a;
+    color: white;
+    border-radius: 10px;
+    padding: 4px;
+  }
+    
+.container2 {
+    height: 230px;
+}
+.cardSpan {
+    color: #9db5c2;
+}
+      
+      

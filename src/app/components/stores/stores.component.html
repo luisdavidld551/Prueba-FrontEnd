@@ -1,0 +1,24 @@
+<div class="contenedor">
+    <div> <h5><i class="fa fa-shopping-cart">&nbsp; Tiendas</i></h5></div>
+    <div>
+    <div class="card mb-2" *ngFor="let i of store;">
+        <div class="algo">
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img" src="{{i.picture}}" alt="Card image cap">
+            </div>
+            <div class="col-md-9">
+                <div>
+                    <h5 class="card-title">{{i.name}}</h5>
+                    <p class="card-text"> <i class="fas fa-map-marker-alt "> {{i.location}} </i> &nbsp;<i class="far fa-star">
+                            {{i.rating}}</i>
+                            <br>
+                    <small class="text-muted">{{i.labels}}</small></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+</div>
+</div>

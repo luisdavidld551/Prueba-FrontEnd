@@ -1,0 +1,21 @@
+.cardB{
+    top: 35%;
+    position: absolute;
+    left: 43%;
+    color: white;
+    border-radius: 10px;
+    padding: 4px;
+}
+.degradar{
+  background-color: rgba(0,0,0,0.8);
+}
+.colorTitulo{
+  color: black;
+}
+.card span {
+  font-size:48px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

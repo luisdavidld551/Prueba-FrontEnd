@@ -18,16 +18,18 @@ export class LoginComponent implements OnInit {
       email: ['', Validators.required,, Validators.email],
       password: ['', Validators.required]
     })
+    this.userServices.handleDataUser("");
   }
 
   ngOnInit(): void {
   }
 
-  iniciarSesion() {
+  iniciarSesion() { this.userServices.handleDataUser("home");
     this.userServices.getUser().subscribe(
       (result:any) => {
         if((this.loginFormulario.value['email'] == result.email) && (this.loginFormulario.value['password'] == result.password)){
           console.log("bien")
+         
           this.router.navigate(['home']);
         }else{
           this.errors = "Usuario o contraseña incorectos";

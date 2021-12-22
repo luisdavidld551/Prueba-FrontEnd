@@ -1,0 +1,30 @@
+<div style="padding-right: 10px;">
+    <div class="pocision">
+        <div>
+           <h5><i class="fas fa-percent"></i>&nbsp;  Promos </h5>
+        </div>
+        <div>
+            <i class="left fas fa-arrow-left" (click)="currentPage != 1 && changePage(-1)"
+                [ngClass]="{'disabled':currentPage === 1}"></i>
+            <i class="right fas fa-arrow-right" (click)="currentPage != totalPages && changePage(+1)"
+                [ngClass]="{'disabled':currentPage === totalPages}"></i>
+        </div>
+    </div>
+    <div>
+        <div class="container2" #container>
+            <div class="cards card2" [ngClass]="{'w-100': totalPages === 1}">
+                <div class="overflow" [ngStyle]="{'width': overflowWidth, 'left': pagePosition}">
+                    <div class="card" *ngFor="let i of promos; let index = index" [ngStyle]="{'width': cardWidth}">
+                        <div class="precioPromo"> $ {{i.price}}</div>
+                        <img class="card-img-top" src="{{i.picture}}" alt="Card image cap">
+                        <div style="padding: 8px;">
+                            {{i.name}}
+                            <div class="cardSpan"> <i class="fas fa-map-marker-alt "> {{i.store}} </i>  &nbsp; <i class="far fa-star">
+                                {{i.rating}}</i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -10,7 +10,10 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { ModalComponent } from './components/modal/modal.component';
+import { CategoriasComponent } from './components/categorias/categorias.component';
+import { StoresComponent } from './components/stores/stores.component';
+import { PromosComponent } from './components/promos/promos.component';
+import { ProductosComponent } from './components/productos/productos.component';
 
 
 @NgModule({
@@ -19,12 +22,15 @@ import { ModalComponent } from './components/modal/modal.component';
     NavbarComponent,
     LoginComponent,
     HomeComponent,
-    ModalComponent
+    CategoriasComponent,
+    StoresComponent,
+    PromosComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     NgbModule,
+    AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

@@ -9,8 +9,10 @@
                    
           </ul>
         </div>
-        <div class="mx-auto order-2">
-              <img src="../assets/help.png" alt="">
-        </div>
-      </div>
+        <div  class="order-2">
+              <img *ngIf="isSignedIn2 != 'home'"src="../assets/help.png" alt="">
+        
+        <div *ngIf="isSignedIn2 == 'home'" style="width: 170px">  <i class="fa fa-shopping-cart"></i>&nbsp; <img class="imgCirculo" src="https://www.dzoom.org.es/wp-content/uploads/2020/02/portada-foto-perfil-redes-sociales-consejos.jpg" width="45px" height="40px" alt=""> &nbsp; {{nombre}}</div>
+     </div> 
+    </div>
   </nav>

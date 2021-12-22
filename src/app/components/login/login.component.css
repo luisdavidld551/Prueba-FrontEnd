@@ -1,4 +1,5 @@
 form {
+    width: 380px;
     display:inline-block;
 }
 form>div {
@@ -19,10 +20,13 @@ form>div>i {
     right:10px;
     top:7px;
 }
-form>h1{
+form>h2{
     color: #2d4e60;
     font-family: revert;
-    font-weight: 900!important;
+    margin-bottom: 2.3rem;
+    margin-top: 1.2rem;
+    font-size: 2.29rem;
+    font-weight: 800;
 }
 .imgCirculo{
     bottom: 15px;

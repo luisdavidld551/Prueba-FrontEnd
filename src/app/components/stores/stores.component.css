@@ -1,0 +1,38 @@
+.card {
+    width:545px;
+    height: 110px;
+    text-align: left;
+    padding: 5px;
+    background-color: #fdfdfd;
+}
+
+.contenedor{
+    text-align: justify;
+}
+img{
+    width: 110px; height: 90px;
+}
+@media screen and (max-width: 800px){
+    .card{
+        width: 680px;
+        border-radius: 5px;
+        display: inline-block;
+        margin-right: 10px;
+        position: relative;
+    }
+}
+@media screen and (max-width: 430px){
+    .card{
+        width: 380px;
+        border-radius: 5px;
+        display: inline-table;
+        margin-right: 10px;
+        position: relative;
+        padding-right: 10px;
+        height: auto;
+    }
+    div>.row{
+       flex-wrap: inherit;
+       text-align: justify;
+    }
+}

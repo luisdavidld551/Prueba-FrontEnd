@@ -1,69 +1,29 @@
-.w-100 {
-    width: 100%!important;
-  }
-  .container2 {
-    color: #9db5c2;
-    display: flex;
-    position: relative;
-    justify-content: center;
-  }
-  .cards {
-    width: calc(100% - 80px);
-    overflow: hidden;
-  }
+
+  .input-group2 {
+    display:inline-block;
+    position:relative;
+    margin:0 20px;
+    background:#ddd;
+    width: 440px;
+    color: #2d4e60;
+}
+.input-group2>input {
+    padding-left: 30px;
+    text-align: left;
+    border:1px solid #ccc;
+    box-shadow:0 1px 1px rgba(0, 0, 0, 0.075) inset;
+}
+.input-group2>i {
+  position:absolute;
+  left:10px;
+  top:11px;
   
-  .overflow {
-    position: relative;
-    transition: left 0.5s ease-in-out;
+}
+@media screen and (max-width: 430px){
+  .input-group2 {
+      width: 350px;
+      margin:0px;
+      display: inline-table;
   }
-  .card2{
-    
-    height: 190px;
-  }
-  .card {
-    padding: 15px;
-    background-color: #e0e1e2;
-    border-radius: 5px;
-    display: inline-block;
-    margin-right: 10px;
-    position: relative;
-  }
-  
-  .no-right-margin {
-    margin-right: 0px;
-  }
-  
-  .card span {
-    font-size:48px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-  
-  .left,
-  .right {
-    height: 30px;
-    width: 30px;
-    color: #0072bc;
-  }
-  
-  .left.disabled, .right.disabled {
-    color:#CCC;
-  }
-  
-  .left {
-    left: 0;
-  }
-  
-  .right {
-    right: 0;
-  }
-  
-  .pocision{
-      display: flex;
-      position: relative;
-      margin-right: 32px;
-      margin-left: 42px;
-      justify-content: space-between;
-  }
+
+}

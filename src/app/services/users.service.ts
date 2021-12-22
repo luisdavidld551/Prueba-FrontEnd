@@ -18,6 +18,14 @@ export class UsersService {
     return this.http.get<Users[]>(this.base).pipe(catchError(this.errorHandler))
   }
 
+  handleDataUser(token: any) {
+    localStorage.setItem('home', token);
+  }
+
+  getUserHome() {
+    return localStorage.getItem('home');
+  }
+
   errorHandler(error: { error: { message: string; }; status: any; message: any; }) {
     let errorMessage = '';
     if(error.error instanceof ErrorEvent) {
