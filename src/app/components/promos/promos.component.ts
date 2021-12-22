@@ -50,7 +50,7 @@ export class PromosComponent implements OnInit {
     //console.log(this.cardsPerPage);
     this.overflowWidth = `calc(${this.totalPages * 100}% + ${this.totalPages * 10}px)`;
     this.cardWidth = `calc((${100 / this.totalPages}% - ${this.cardsPerPage * 10}px) / ${this.cardsPerPage})`;
-    console.log(this.cardWidth);
+    
   }
 
   getCardsPerPage() {

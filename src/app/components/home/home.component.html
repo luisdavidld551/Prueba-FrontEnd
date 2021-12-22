@@ -1,12 +1,12 @@
 <br><br><br>
 <div class="container">
-    <div class="container"> 
+    <div> 
         <div>
             <h5>Hola {{nombre}}, ¿Qué te entregamos hoy? </h5>
         </div>
         <div class="input-group2 rounded">
             <i class="fas fa-search" type="submit" (click)="buscarTienda()"></i>
-            <input type="search" [(ngModel)]="nameBuscar" class="form-control rounded" placeholder="Buscar productos y tiendas">
+            <input type="search"  (click)="buscarTienda2()" [(ngModel)]="nameBuscar" class="form-control rounded" placeholder="Buscar productos y tiendas">
             <div *ngIf="tienda"> <app-productos [storesProduct]="tienda"></app-productos></div>
         </div>
     </div>

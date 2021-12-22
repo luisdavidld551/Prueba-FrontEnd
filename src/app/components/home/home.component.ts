@@ -15,10 +15,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  buscarTienda2(){
+    this.tienda = "";
+  }
   buscarTienda(){
     this.tienda = this.nameBuscar;
-    console.log(this.nameBuscar);
   }
 
 }

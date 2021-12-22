@@ -134,7 +134,7 @@ export class ProductosComponent implements OnInit {
       "description": "Quisque finibus, lacus cursus faucibus cursus, dui nisl convallis libero, et ultricies augue purus in dolor. Donec tellus nulla, ullamcorper et viverra in, faucibus sit amet odio."
     }
   ];
-
+  mensajeAlert:string = "";
   showProductos: Productos[] = [];
   store2: Stores[] = [];
 
@@ -149,15 +149,16 @@ export class ProductosComponent implements OnInit {
     this.modal.open(this.contenido, { size: 'lg' });
   }
   ngOnInit(): void {
+    this.open();
     this.storesService.getStores().subscribe(
       result => {
         this.store = result;
         this.recorrerTiendas(this.storesProduct);
-
       },
       err => {
         this.typeAler = "warning";
         this.toggoleShowHide = "none";
+        this.mensajeAlert = "No hay tiendas con este nombre: "+ this.storesProduct;
         this.changeSuccessMessage();
       },
       () => console.log('HTTP request completed.'));
@@ -168,8 +169,6 @@ export class ProductosComponent implements OnInit {
       if (clave.name == tienda) {
         this.idTienda = clave.id;
         this.store2.push(clave);
-        console.log(this.idTienda);
-        console.log(this.store2);
         this.recorrerProductos();
       }
     }
@@ -182,17 +181,15 @@ export class ProductosComponent implements OnInit {
         for (let clave of this.producto) {
           if (clave.storeId == this.idTienda) {
             this.showProductos.push(clave);
-            console.log("Hola");
           }
         }
         this.cantidad = this.showProductos.length;
         this.open();
-        console.log(this.showProductos.length);
-        console.log(this.showProductos);
       },
       err => {
         this.typeAler = "warning";
         this.toggoleShowHide = "none";
+        this.mensajeAlert = "Esta tiendas no tiene productos";
         this.changeSuccessMessage();
       },
       () => console.log('HTTP request completed.'));

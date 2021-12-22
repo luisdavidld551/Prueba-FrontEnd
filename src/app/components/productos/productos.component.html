@@ -1,6 +1,6 @@
 <div class="container" id="alertas">
-    <ngb-alert #staticAlert *ngIf="!staticAlertClosed" [type]="typeAler" (closed)="staticAlertClosed = true">No hay
-        tiendas con este nombre: {{storesProduct}}</ngb-alert>
+    <ngb-alert #staticAlert *ngIf="!staticAlertClosed" [type]="typeAler" (closed)="staticAlertClosed = true">
+        {{mensajeAlert}}</ngb-alert>
 </div>
 <br><br>
 <ng-template #contenido let-modal>
@@ -25,42 +25,47 @@
         </button>
     </div>
     <div class="modal-body">
-        <div *ngIf="cantidad == 1">
-            <div class="card">
-                <div class="row">
-                    <div class="col-5">
-                        <img src="{{showProductos[0].picture}}" width="280px" height="180px" class="card-img-top" alt="...">
-                    </div>
-                    <div class="col-7">
-                        <h5 class="card-title">{{showProductos[0].name}}</h5>
-                        <p class="card-text"> <i class="fas fa-map-marker-alt "> {{showProductos[0].location}} </i>
-                            &nbsp;<i class="far fa-star">{{showProductos[0].rating}}</i>
-                            <br>
-                            {{showProductos[0].price}}
-                            <br>
-                            {{showProductos[0].description}}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div *ngIf="cantidad > 1">
-            <div *ngFor="let produc of showProductos">
+        <div class="row row-cols-1 row-cols-md-2 g-4">
+            <div *ngIf="cantidad == 1">
                 <div class="card">
-                    <img src="{{produc.picture}}"  width="100px" height="100px" class="card-img-top" alt="...">
-                    <div class="card-body">
-                        <h5 class="card-title">{{produc.name}}</h5>
-                        <p class="card-text"> <i class="fas fa-map-marker-alt "> {{produc.location}} </i>
-                            &nbsp;<i class="far fa-star">{{produc.rating}}</i>
-                            <br>
-                            {{produc.price}}
-                            <br>
-                            {{produc.description}}
-                        </p>
+                    <div class="row">
+                        <div class="col-5">
+                            <img src="{{showProductos[0].picture}}" width="280px" height="180px" class="card-img-top"
+                                alt="...">
+                        </div>
+                        <div class="col-7">
+                            <h5 class="card-title">{{showProductos[0].name}}</h5>
+                            <p class="card-text"> <i class="fas fa-map-marker-alt "> {{showProductos[0].location}} </i>
+                                &nbsp;<i class="far fa-star">{{showProductos[0].rating}}</i>
+                                <br>
+                                {{showProductos[0].price}}
+                                <br>
+                                {{showProductos[0].description}}
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
-
+            <div *ngIf="cantidad == 0"><h4>Esta tienda no tiene productos</h4></div>
+            <div *ngIf="cantidad > 1">
+                <div *ngFor="let produc of showProductos">
+                    <div class="col">
+                        <div class="card" style="width: 18rem;">
+                            <img src="{{produc.picture}}" width="100px" height="100px" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{produc.name}}</h5>
+                                <p class="card-text"> <i class="fas fa-map-marker-alt "> {{produc.location}} </i>
+                                    &nbsp;<i class="far fa-star">{{produc.rating}}</i>
+                                    <br>
+                                    {{produc.price}}
+                                    <br>
+                                    {{produc.description}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </ng-template>

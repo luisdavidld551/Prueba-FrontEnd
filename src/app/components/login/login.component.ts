@@ -27,9 +27,7 @@ export class LoginComponent implements OnInit {
   iniciarSesion() { this.userServices.handleDataUser("home");
     this.userServices.getUser().subscribe(
       (result:any) => {
-        if((this.loginFormulario.value['email'] == result.email) && (this.loginFormulario.value['password'] == result.password)){
-          console.log("bien")
-         
+        if((this.loginFormulario.value['email'] == result.email) && (this.loginFormulario.value['password'] == result.password)){         
           this.router.navigate(['home']);
         }else{
           this.errors = "Usuario o contraseña incorectos";
