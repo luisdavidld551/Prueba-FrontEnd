@@ -24,10 +24,11 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  iniciarSesion() { this.userServices.handleDataUser("home");
+  iniciarSesion() {
     this.userServices.getUser().subscribe(
       (result:any) => {
         if((this.loginFormulario.value['email'] == result.email) && (this.loginFormulario.value['password'] == result.password)){         
+          this.userServices.handleDataUser("home");
           this.router.navigate(['home']);
         }else{
           this.errors = "Usuario o contraseña incorectos";
